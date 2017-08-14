@@ -1,0 +1,5 @@
+{
+  "verbose": true,
+  "watch": ["src/server", "webpack.config.js"],
+  "ignore": ["src/public"]
+}
