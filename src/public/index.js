@@ -41,17 +41,16 @@ window.scene = scene
 const blocks = []
 
 const indev = require('indev')
-const generator = indev({ seed: 'lol' })
+const generator = indev({ seed: Math.random() })
 const simplexGenerator = generator.simplex({
 	min: 0,
 	max: 12,
 	frequency: 0.01,
 	octaves: 8
 })
-const worldSize = 70
+const worldSize = 30
 const feature_size = 12
 import Perlin from './lib/perlin'
-const pn = new Perlin('WOOT')
 for (var x = 0; x < worldSize; x++) {
 	for (var z = 0; z < worldSize; z++) {
 		const y = simplexGenerator.in2D(x, z)

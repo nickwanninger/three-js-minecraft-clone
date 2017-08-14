@@ -50403,17 +50403,16 @@
 	var blocks = [];
 	
 	var indev = __webpack_require__(83);
-	var generator = indev({ seed: 'lol' });
+	var generator = indev({ seed: Math.random() });
 	var simplexGenerator = generator.simplex({
 		min: 0,
 		max: 12,
 		frequency: 0.01,
 		octaves: 8
 	});
-	var worldSize = 70;
+	var worldSize = 30;
 	var feature_size = 12;
 	
-	var pn = new _perlin2.default('WOOT');
 	for (var x = 0; x < worldSize; x++) {
 		for (var z = 0; z < worldSize; z++) {
 			var y = simplexGenerator.in2D(x, z);
